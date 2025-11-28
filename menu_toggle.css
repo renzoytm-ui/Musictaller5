@@ -1,0 +1,79 @@
+/* BOTÓN HAMBURGUESA (ESCONDE EN DESKTOP) */
+.menu-toggle {
+  display: none; /* Oculto por defecto */
+  font-size: 2rem; /* Tamaño del ícono hamburguesa */
+  background: none; /* Sin fondo */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Manito al pasar el mouse */
+  margin-right: 1rem; /* Espacio entre el borde derecho */
+  color: #333; /* Color del ícono */
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #007bff; /* Color al hacer hover */
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE: MÓVILES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar botón hamburguesa en móviles */
+  }
+
+  .Menu-Horizontal {
+    display: none; /* Ocultar menú horizontal por defecto */
+    flex-direction: column; /* Mostrarlo en vertical al activarse */
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%; /* Debajo del header */
+    left: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-top: 1px solid #eee;
+  }
+
+  .Menu-Horizontal.active {
+    display: flex; /* Mostrar menú al activar la clase */
+  }
+
+  .Menu-Horizontal li {
+    border-bottom: 1px solid #f0f0f0; /* Líneas separadoras más suaves */
+    width: 100%;
+  }
+
+  .Menu-Horizontal li:last-child {
+    border-bottom: none;
+  }
+
+  .Menu-Horizontal a {
+    display: block;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+
+  .Menu-Horizontal a:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+/* Animación para el ícono hamburguesa */
+.menu-toggle.open {
+  color: #007bff;
+}
+
+.menu-toggle.open::before {
+  content: "✕"; /* Cambiar a X cuando está abierto */
+}
+
+/* Para pantallas grandes */
+@media (min-width: 769px) {
+  .Menu-Horizontal {
+    display: flex !important; /* Forzar mostrar en desktop */
+  }
+}

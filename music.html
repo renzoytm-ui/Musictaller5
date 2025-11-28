@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<nav class="Menu-Nav">
+  <!-- BOTÓN HAMBURGUESA -->
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+  <!-- MENÚ HORIZONTAL -->
+  <ul class="Menu-Horizontal">
+    <li><a href="music.html">Login</a></li>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- LOGOS Y MENÚS -->
+    <nav class="topheader">
+      <a href="#" class="logo">
+        <img
+          height="90"
+          width="90"
+          src="SD/logo.png"
+          alt="Logo de Renzopapipro"
+        />
+      </a>
+
+      <ul class="menu-horizontal">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Explorar</a></li>
+        <li>
+          <a href="#">Biblioteca</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Playlist</a></li>
+            <li><a href="#">Me gusta</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="seccion-sobremi">
+      <div class="div-gral-sobremi">
+        <div class="div-sobremi-texto">
+          <p>
+            ¡Hola! Soy el creador de MussiConnect, una aplicación pensada para
+            los amantes de la música que quieren conectar, descubrir y compartir
+            sus sonidos favoritos. Mi objetivo con MussiConnect es crear una
+            comunidad donde cada usuario pueda expresar su estilo musical,
+            encontrar nuevas canciones y artistas, y vivir la música de una
+            forma más social e interactiva. Creo que la música tiene el poder de
+            unir a las personas, y con esta app quiero que esa conexión sea más
+            fácil, divertida y auténtica.
+          </p>
+        </div>
+
+        <div class="div-sobremi-img">
+          <img src="SD/imgDiv.jpg" alt="Perfil" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section class="seccion-formulario">
+      <div class="div-cont-formulario">
+        <form class="formulario" action="#" method="post">
+          <!-- CAMPOS DE TEXTO -->
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico:</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+          </div>
+
+          <!-- LISTA DE CHECKBOX -->
+          <div class="campo">
+            <label>Géneros musicales favoritos:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label
+                  ><input type="checkbox" name="genero" value="rock" />
+                  Rock</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genero" value="pop" />
+                  Pop</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genero" value="electronica" />
+                  Electrónica</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genero" value="reggaeton" />
+                  Reggaetón</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="genero" value="clasica" />
+                  Clásica</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- LISTA DE RADIO -->
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="masculino" />
+                  Masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="femenino" />
+                  Femenino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="otro" /> Otro</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- CAJITA DESPLEGABLE (SELECT) -->
+          <div class="campo">
+            <label for="pais">Selecciona tu país:</label>
+            <select id="pais" name="pais" required>
+              <option value="">-- Elige una opción --</option>
+              <option value="peru">Perú</option>
+              <option value="mexico">México</option>
+              <option value="argentina">Argentina</option>
+              <option value="chile">Chile</option>
+              <option value="colombia">Colombia</option>
+              <option value="espana">España</option>
+            </select>
+          </div>
+
+          <!-- ÁREA DE TEXTO -->
+          <div class="campo">
+            <label for="comentarios">Comentarios o sugerencias:</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="4"
+              placeholder="Escribe tus comentarios aquí..."
+            ></textarea>
+          </div>
+
+          <!-- BOTÓN -->
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
